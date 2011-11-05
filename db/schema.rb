@@ -10,11 +10,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111105081625) do
+ActiveRecord::Schema.define(:version => 20111105112913) do
 
   create_table "employees", :force => true do |t|
     t.string   "name"
     t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "ranks", :force => true do |t|
+    t.string   "name"
+    t.integer  "points"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

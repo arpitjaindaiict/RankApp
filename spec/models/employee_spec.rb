@@ -1,5 +1,15 @@
 require 'spec_helper'
 
 describe Employee do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe "task associations" do
+
+    before(:each) do
+      @employee = Employee.create(@attr)
+    end
+
+    it "should have a tasks attribute" do
+      @employee.should respond_to(:tasks)
+    end
+  end
+  
 end
